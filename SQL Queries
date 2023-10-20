@@ -1,0 +1,93 @@
+1.Who prefers energy drink more? (male/female/non-binary?)
+select Gender, count(*) as 'gender_prefernce'
+from dim_repondents1
+group by Gender
+order by gender_prefernce desc
+
+2.Which age group prefers energy drinks more?
+select age, count(*) as 'preferred_count' 
+from dim_repondents1
+group by age
+order by preferred_count desc
+
+3.Which type of marketing reaches the most Youth (15-30)?
+select f.Marketing_channels, count(*) as'reached youth'  
+from fact_survey_responses1 f
+join dim_repondents1 d 
+on f.Respondent_ID= d.Respondent_ID
+where d.age = '19-30' or d.age = '15-18'
+group by Marketing_channels
+
+4.What are the preferred ingredients of energy drinks among respondents
+select ingredients_expected , count(*) as 'preferred_ingredients' 
+from fact_survey_responses1
+group by Ingredients_expected
+order by preferred_ingredients desc
+
+5.What packaging preferences do respondents have for energy drinks
+select Packaging_preference , count(*) as 'packaging_choices'
+from fact_survey_responses1
+group by Packaging_preference
+order by packaging_choices desc
+
+6.Who are the current market leaders
+select Current_brands, count(*) as 'market_leaders'
+from fact_survey_responses1
+group by Current_brands
+order by market_leaders desc
+
+7.What are the primary reasons consumers prefer those brands over ours?
+select Reasons_for_choosing_brands, count(*) as 'other_brand_prefernces' 
+from fact_survey_responses1
+group by Reasons_for_choosing_brands
+order by other_brand_prefernces
+
+8.Which marketing channel can be used to reach more customers
+select Marketing_channels, count(*) as 'best_marketing_channels'
+from fact_survey_responses
+group by Marketing_channels
+order by best_marketing_channels desc;
+
+9.What do people think about our brand
+select Brand_perception, count(*) as 'brand_rating'
+from fact_survey_responses
+group by Brand_perception
+order by brand_rating desc;
+
+10.Which cities do we need to focus more on?
+SELECT c.City, c.Tier, COUNT(*) AS 'response_count'
+FROM dim_cities c
+JOIN dim_repondents r 
+ON c.City_ID = r.City_ID
+GROUP BY c.City, Tier
+ORDER BY 'response_count';
+
+11.Where do respondents prefer to purchase energy drinks
+select Purchase_location, count(*) as 'prefer_purchase_location'
+from fact_survey_responses
+group by Purchase_location
+order by prefer_purchase_location desc;
+
+12.What are the typical consumption situations for energy drinks among respondents?
+select Typical_consumption_situations, count(*) as 'consumption_situation'
+from fact_survey_responses
+group by Typical_consumption_situations
+order by consumption_situation desc;
+
+13.What factors influence respondents' purchase decisions, such as price range and limited edition packaging?
+select Limited_edition_packaging, count(*) as 'survey_answer'
+from fact_survey_responses
+group by Limited_edition_packaging
+order by 'survey_answer' desc;
+
+select Price_range, count(*) as 'desired_price'
+from fact_survey_responses
+group by Price_range
+order by 'desired_price' desc
+
+14.Which area of business should we focus more on our product development?
+select Reasons_for_choosing_brands, count(*) as 'focus_area'
+from fact_survey_responses
+group by Reasons_for_choosing_brands
+order by focus_area desc;
+
