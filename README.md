@@ -33,7 +33,7 @@ Actionable Recommendations:
 
 Enhance the product with natural alternatives like green tea extract and Guarana.
 
-Strategically price products for Tier 1 and Tier 2 cities.
+CodeX should look to tackle unavailibity and health concerns for the brand.
 
 
  Conclusion:
