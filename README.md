@@ -38,4 +38,4 @@ CodeX should look to tackle unavailibity and health concerns for the brand.
 
  Conclusion:
 
-Participating in the codebasics Resume Project Challenge allowed me to analyze survey data and provide actionable insights for CodeX's marketing strategies.
+Engaging in the codebasics Resume Project Challenge enabled me to conduct an in-depth analysis of survey data, actionable insights crucial for enhancing CodeX's marketing strategies.
