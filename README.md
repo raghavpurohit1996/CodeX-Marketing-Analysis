@@ -2,7 +2,8 @@
 
 Task:
 
-My role was to analyze survey data from 10,000 participants and extract meaningful insights. This helped CodeX make informed marketing decisions, increase brand awareness, and enhance product development.
+I was tasked with the responsibility of analyze survey data collected from a pool of 10,000 participants in order to give valuable insights. These insights may play a pivotal role in guiding CodeX's marketing strategies, amplifying brand recognition, and refining the trajectory of product development.
+
 
 
 Approach:
